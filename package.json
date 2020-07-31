@@ -22,7 +22,7 @@
   },
   "scripts": {
     "lint": "eslint . --fix",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Måns Jackson",
   "license": "ISC"

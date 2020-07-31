@@ -1,9 +1,0 @@
-{
-    "extends": [
-        "salt",
-        "salt/react"
-    ],
-    "rules": {
-        "camelcase": "off"
-    }
-}
