@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import {
   Typography, Button, Card, CardContent, CardMedia,
 } from '@material-ui/core';
+import useStyles from './styles';
 
 export default function LibCard({ album, callback }) {
   const {
@@ -10,19 +11,12 @@ export default function LibCard({ album, callback }) {
   } = album;
   const artist = title.split(' - ')[0];
   const albumName = title.split(' - ')[1];
+  const classes = useStyles();
 
   return (
-    <Card style={{
-      display: 'flex',
-      alignItems: 'center',
-      textAlign: 'center',
-      margin: '.5rem',
-      flexDirection: 'column',
-      padding: '1rem 1rem 0 ',
-    }}
-    >
+    <Card className={classes.card}>
       <CardMedia
-        style={{ width: 300, height: 300 }}
+        className={classes.card__image}
         image={cover_image}
       />
       <CardContent>

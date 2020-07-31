@@ -2,28 +2,12 @@ import React, { useState } from 'react';
 import {
   Paper, Tab, Tabs, Box,
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import './App.css';
 import propTypes from 'prop-types';
 import Home from './Home';
 import Settings from './Settings';
 import Library from './Library';
-
-const useStyles = makeStyles({
-  app: {
-    backgroundColor: 'whitesmoke',
-    minHeight: '100vh',
-  },
-
-  notification: {
-    position: 'fixed',
-    padding: '1rem',
-    bottom: '1rem',
-    right: '1rem',
-    backgroundColor: 'blanchedalmond',
-    borderRadius: '.2rem',
-    zIndex: '1',
-  },
-});
+import useStyles from './styles';
 
 function TabPanel({ children, value, index }) {
   return (

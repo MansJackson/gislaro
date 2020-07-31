@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import propTypes from 'prop-types';
-
 import {
   Select, MenuItem, Card, Typography, Button, CardMedia, CardContent,
 } from '@material-ui/core';
+import useStyles from './styles';
 
 export default function AlbumCard({ album, callback }) {
   const [selectedGenre, setSelectedGenre] = useState(album.genre[0]);
+  const classes = useStyles();
 
   const {
     title, genre, cover_image, year,
@@ -16,17 +17,9 @@ export default function AlbumCard({ album, callback }) {
   const albumName = title.split(' - ')[1];
 
   return (
-    <Card style={{
-      display: 'flex',
-      alignItems: 'center',
-      textAlign: 'center',
-      margin: '.5rem',
-      flexDirection: 'column',
-      padding: '1rem',
-    }}
-    >
+    <Card className={classes.card}>
       <CardMedia
-        style={{ width: 300, height: 300 }}
+        className={classes.card__image}
         image={cover_image}
       />
       <CardContent>
