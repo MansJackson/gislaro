@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "eslint-config-salt": "^1.0.1",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "lint": "eslint . --fix",
+    "start": "nodemon index.js"
+  },
+  "author": "Måns Jackson",
+  "license": "ISC"
+}
